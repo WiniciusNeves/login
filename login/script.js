@@ -1,11 +1,11 @@
-document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var usuario = document.querySelector('input[type="text"]').value;
-    var senha = document.querySelector('input[type="password"]').value;
+const container = document.getElementById('container');
+const registerBtn = document.getElementById('register');
+const loginBtn = document.getElementById('login');
 
-    if (usuario === 'adm' && senha === '123') {
-        alert('Login bem-sucedido!');
-    } else {
-        alert('Usuário ou senha inválidos!');
-    }
+registerBtn.addEventListener('click', () => {
+    container.classList.add("active");
+});
+
+loginBtn.addEventListener('click', () => {
+    container.classList.remove("active");
 });
